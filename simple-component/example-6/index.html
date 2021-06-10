@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue component</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <vegetables-list
+      v-for="vegetal in vegetablesList"
+      v-bind:prop="vegetal">
+    </vegetables-list>
+  </ul>
+</div>
+
+<script>
+Vue.component('vegetables-list', {
+  props: ['prop'],
+  template: '<li>{{ prop.name }}</li>'
+})
+
+var app7 = new Vue({
+  el: '#app',
+  data: {
+    vegetablesList: [
+      { name: 'Vegetables' },
+      { name: 'Cheese' },
+      { name: 'Karrot' }
+    ]
+  }
+})
+</script>
+</body>
+</html>

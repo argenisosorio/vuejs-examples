@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(show, index) in tvshows" v-bind:key="index">
+        {{ show.name }} ({{ show.seasons }} temporadas)
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        tvshows: [
+          { name: 'Serie 1', seasons: 3 },
+          { name: 'Serie 2', seasons: 5 },
+          { name: 'Serie 3', seasons: 2 },
+        ]
+      }
+    })
+  </script>
+</body>
+</html>

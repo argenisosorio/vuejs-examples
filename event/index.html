@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Component vue example</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+    const app = new Vue({
+      el: '#app',
+      template: `
+        <div>
+
+          <div v-if="show">
+            <ul>
+              <li v-for="(course, index) in courses" v-bind:key="index">
+                <a v-bind:href="course.url"> {{ course.name }} </a>
+              </li>
+            </ul>
+          </div>
+          <button @click="toggleShow()">Show/Hide</button>
+
+        </div>
+      `,
+      data: {
+        show: true,
+        courses: [
+          { name: "PHP", url: 'https://www.youtube.com/1' },
+          { name: "Python", url: 'https://www.youtube.com/2' },
+          { name: "JavaScript", url: 'https://www.youtube.com/3' },
+        ],
+      },
+      methods: {
+        toggleShow: function () {
+          this.show = !this.show
+        }
+      }
+    })
+    </script>
+  </body>
+</html>

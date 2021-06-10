@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="list1">
+    <ul>
+      <li v-for="name in names">
+        {{ name }}
+      </li>
+    </ul>
+  </div>
+
+  <br />
+
+  <div id="list2">
+    <ul>
+      <li v-for="color in colors">
+        {{ color }}
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    var list1 = new Vue({
+      el: '#list1',
+      data: {
+        names: ["José","Pedro","Juan","María"]
+      }
+    })
+
+    var list2 = new Vue({
+      el: '#list2',
+      data: {
+        colors: ["Blue","Orange","Red","Green"]
+      }
+    })
+  </script>
+</body>
+</html>

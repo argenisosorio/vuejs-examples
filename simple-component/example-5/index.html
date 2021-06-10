@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue component</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <!-- Crea una instancia del componente paragraphs -->
+    <paragraphs></paragraphs>
+</div>
+
+<script>
+// Define un nuevo componente llamado paragraphs
+Vue.component('paragraphs', {
+  template: `
+  <div>
+    <p>This is a paragraphs</p>
+  <div>
+  `
+})
+new Vue({
+  el: '#app'
+})
+</script>
+</body>
+</html>
