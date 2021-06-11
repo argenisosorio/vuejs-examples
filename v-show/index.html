@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+ Product X
+ <br />
+ <input type="number" v-model.number="items">
+ <br />
+ <p v-show="hasItems()">
+   You order has {{ items }} items
+ </p>
+</div>
+
+<script>
+var app = new Vue({
+  el: "#app",
+  data: {
+    items: 0
+  },
+  methods: {
+    hasItems: function() {
+      return this.items > 0;
+    }
+  }
+});
+</script>
+</body>
+</html>

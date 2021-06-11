@@ -1,0 +1,26 @@
+<!-- 
+Esta directiva permite hacer un trabajo similar a la interpolación de texto con la diferencia que la interpolación puede ser usada para renderizar un fragmento del texto de un elemento, la directiva v-text renderizará todo el contenido. Vemos un ejemplo.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <p>Hello {{ message }}</p>
+  <p v-text="greeting"></p>
+</div>
+<script type="text/javascript">
+var app = new Vue({
+  el: "#app",
+  data: {
+    message: "World",
+    greeting: "Hello World"
+  }
+});
+</script>
+</body>
+</html>

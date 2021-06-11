@@ -1,0 +1,24 @@
+<!-- 
+Esta directiva permite imprimer código html en el elemento en cuestión. Es el equivalente al innerHTML de JavaScript. Veamos un ejemplo.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <p v-html="greeting"></p>
+</div>
+<script type="text/javascript">
+var app = new Vue({
+  el: "#app",
+  data: {
+    greeting: "<h1>Hello World</h1>"
+  }
+});
+</script>
+</body>
+</html>
