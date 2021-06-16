@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue example</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <input type="text" v-model="firstName" />
+  <p>
+    Your first name is {{ firstName }}
+  </p>
+</div>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    firstName: 'Steve'
+  }
+});
+</script>
+
+</style>
+</body>
+</html>

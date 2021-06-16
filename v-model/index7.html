@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue example</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <label>Enabled</label>
+  <input type="checkbox" v-model="enabled" />
+  <p>
+    User is {{ enabled ? 'enabled' : 'disabled' }}
+  </p>
+</div>
+<script>
+var app = new Vue({
+  el: "#app",
+  data: {
+    enabled: true
+  }
+});
+</script>
+</body>
+</html>

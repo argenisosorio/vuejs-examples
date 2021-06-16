@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue example</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <input type="radio" v-model="profile" value="admin" />
+  <label>Admin</label><br />
+  <input type="radio" v-model="profile" value="guest" />
+  <label>Guest</label><br />
+  <p>
+    Your profile is {{ profile }}
+  </p>
+</div>
+<script>
+var app = new Vue({
+  el: "#app",
+  data: {
+    profile: 'admin'
+  }
+});
+</script>
+</body>
+</html>
