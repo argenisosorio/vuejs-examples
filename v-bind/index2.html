@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue example</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <img v-bind:src="image" width="80" /> {{ $message }}
+</div>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Vue.js',
+    image: 'https://blog.pleets.org/img/articles/vuejs-icon.png'
+  }
+});
+</script>
+</body>
+</html>
