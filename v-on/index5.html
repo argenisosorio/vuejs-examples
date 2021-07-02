@@ -1,0 +1,26 @@
+<!-- Pasando parámetros en la función -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue component</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <button type="button" v-on:click="saludar('Eduardo','Perez')">
+    Saludar
+  </button>
+</div>
+<script>
+new Vue({
+  el: "#app",
+  methods: {
+    saludar: function(name, lastname) {
+      alert("Hola " + name + " " + lastname);
+    }
+  }
+});
+</script>
+</body>
+</html>

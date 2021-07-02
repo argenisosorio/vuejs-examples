@@ -1,0 +1,37 @@
+<!--
+Accediendo a data desde los métodos.
+
+Dentro de los métodos podemos acceder a cualquier variable
+definida en nuestro objeto data usando this más el nombre de
+la variable que deseamos usar.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue component</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <button type="button" v-on:click="showFullName">
+    Mostrar Nombre
+  </button>
+</div>
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      firstName: "Eduardo",
+      lastName: "P. Rivero"
+    },
+    methods: {
+      showFullName: function() {
+        alert(this.firstName + " " + this.lastName);
+      }
+    }
+  });
+</script>
+</body>
+</html>

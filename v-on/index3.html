@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue example</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="main">
+  <button type="button" v-on:click="saludar">
+    Saludar
+  </button>
+</div>
+<script>
+var demo = new Vue({
+  el: '#main',
+  methods: {
+    saludar: function() {
+      alert("Hola");
+    }
+  }
+});
+</script>
+</body>
+</html>

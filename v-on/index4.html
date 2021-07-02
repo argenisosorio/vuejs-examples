@@ -1,0 +1,31 @@
+<!--
+Imaginemos que queremos pasar algún parámetro desde nuestro
+template al método, tendríamos que enviar el parámetro tal
+como cuando invocamos un método en el javascript de toda
+la vida.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue component</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <button type="button" v-on:click="saludar('Eduardo')">
+    Saludar
+  </button>
+</div>
+<script>
+new Vue({
+  el: "#app",
+  methods: {
+    saludar: function(name) {
+      alert("Hola" + name);
+    }
+  }
+});
+</script>
+</body>
+</html>
