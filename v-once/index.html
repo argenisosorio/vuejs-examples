@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <p v-once>{{onceMessage}}</p>
+<script type="text/javascript">
+var app = new Vue({
+  el: "#app",
+  data: {
+    onceMessage: "Este mensaje nunca cambiará"
+  }
+});
+</script>
+</body>
+</html>

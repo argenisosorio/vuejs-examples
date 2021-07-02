@@ -1,0 +1,30 @@
+<!-- 
+Esta directiva permite imprimir código html en el elemento en cuestión.
+Es el equivalente al innerHTML de JavaScript.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <div v-pre>
+    <p v-if="false">Las directivas aca no tienen poder</p>
+    <div>
+      <p>{{preValue}}</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+var app = new Vue({
+  el: "#app",
+  data: {
+    preValue: "Este mensaje no se verá en el template"
+  }
+});
+</script>
+</body>
+</html>
