@@ -1,0 +1,34 @@
+<!-- Agregar elementos a la lista -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar elementos a la lista</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <!-- Otra forma de mostrar los datos del array es con la directiva v-text -->
+      <li v-for="elemento in listaDeElementos" v-text="elemento"></li>
+    </ul>
+    <!-- input apuntando al modelo nombre, y que al pulsar enter llama al método agregaNombre -->
+    <input type="text" id="nombreElemento" v-model="nombre" v-on:keyup.enter="agregarNombre">
+  </div>
+  <script>
+    var appListarElementos = new Vue({
+      el: '#app',
+      data: {
+        listaDeElementos: ['Lorem ipsum', 'Hola mundo!', 'Wakanda forever!'],
+        nombre: '',
+      },
+      methods: {
+        agregarNombre: function() {
+          this.listaDeElementos.push(this.nombre);
+          this.nombre = '';
+        }
+      },
+    });
+  </script>
+</body>
+</html>

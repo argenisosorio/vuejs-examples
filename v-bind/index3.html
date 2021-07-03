@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Binding</title>
+  <script src="../js/vue.js"></script>
+</head>
+<body>
+
+  <div id="main">
+
+    <!-- Data binding como JS -->
+    {{ 1 + 2 }}
+
+    <!-- Data binding para modificar valores de atributos -->
+    <input type="text" v-bind:style="color" v-bind:value="valorDelInput" >
+    
+    <!-- full syntax -->
+    <p v-bind:style="color"> Sintaxis larga </p>
+
+    <!-- shorthand -->
+    <p :style="color"> Sintaxis corta </p>
+
+  </div>
+
+  <script>
+    var binding = new Vue({
+      el: '#main',
+      data: {
+        valorDelInput: 'Texto de ejemplo',
+        color: 'color: #00f',
+      }
+    })
+  </script>
+
+</body>
+</html>
