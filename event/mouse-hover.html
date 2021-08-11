@@ -1,0 +1,32 @@
+<!-- Ahora, la propiedad reactiva hover siempre reflejará si el mouse está sobre el elemento o no. -->
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Component vue example</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+    const app = new Vue({
+      el: '#app',
+      template: `
+        <div>
+
+          <span @mouseover="hover=true" @mouseleave="hover=false">
+            Hover me to show the message!
+          </span>
+          <span v-if="hover">This is a secret message.</span>
+
+        </div>
+      `,
+      data: {
+        hover: false,
+      },
+    })
+    </script>
+  </body>
+</html>
