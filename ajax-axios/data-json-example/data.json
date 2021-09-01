@@ -1,1 +1,16 @@
-{"projects":[{"id":3,"name":"Project 1","introduction":"xxxxxxx","created_at":"2021-06-02T16:57:08.000000Z","updated_at":"2021-06-21T02:47:16.000000Z"},{"id":5,"name":"Project 2","introduction":"yyyyyyyyyyyyy","created_at":"2021-06-02T16:57:15.000000Z","updated_at":"2021-06-21T02:47:27.000000Z"},{"id":7,"name":"dasda","introduction":"dsadasd","created_at":"2021-07-17T02:22:31.000000Z","updated_at":"2021-07-17T02:22:31.000000Z"},{"id":8,"name":"adsad","introduction":"dasdad","created_at":"2021-07-17T02:48:57.000000Z","updated_at":"2021-07-17T02:48:57.000000Z"},{"id":9,"name":"xxxx","introduction":"xxxx","created_at":"2021-07-17T02:57:41.000000Z","updated_at":"2021-07-17T02:57:41.000000Z"},{"id":10,"name":"dsadasda","introduction":"dasdasda","created_at":"2021-07-17T02:58:46.000000Z","updated_at":"2021-07-17T02:58:46.000000Z"},{"id":11,"name":"dsadasd","introduction":"asdasdsad","created_at":"2021-07-17T02:59:29.000000Z","updated_at":"2021-07-17T02:59:29.000000Z"}]}
+{
+  "projects":[
+    {
+      "id":1,
+      "name":"Project 1",
+      "description":"Description of project 1",
+       "tags":["tag1","tag2"]
+    },
+    {
+      "id":2,
+      "name":"Project 2",
+      "description":"Description of project 2",
+       "tags":["tag1","tag2"]
+    }
+  ]
+}

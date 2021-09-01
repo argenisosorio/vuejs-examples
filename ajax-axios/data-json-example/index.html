@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Data json example</title>
+  <title>Ajax</title>
   <script src="https://unpkg.com/vue"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 </head>
@@ -15,12 +15,18 @@
           <tr>
             <th scope="col">ID</th>
             <th scope="col">NAME</th>
+            <th scope="col">DESCRIPTION</th>
+            <th scope="col">TAGS</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="project in listProjects">
             <td v-text="project.id"></td>
             <td v-text="project.name"></td>
+            <td v-text="project.description"></td>
+            <td v-text="project.tags"></td>
+            <!--td v-text="project.tags[0]"></td-->
+            <!--td v-text="project.tags[1]"></td-->
           </tr>
         </tbody>
       </table>
