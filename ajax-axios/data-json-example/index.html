@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data json example</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+<body>
+<div id="main" class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table" border="1px">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="project in listProjects">
+            <td v-text="project.id"></td>
+            <td v-text="project.name"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script>
+  var ajaxConVue = new Vue({
+    el: '#main',
+    data: {
+      listProjects: []
+    },
+    created: function(){
+      this.queryProjects();
+    },
+    methods: {
+      queryProjects: function() {
+        axios.get('http://127.0.0.1/share/ajax/data.json').then(response => {
+          this.listProjects = response.data.projects
+        });
+      }
+    }
+  })
+</script>
+</body>
+</html>
