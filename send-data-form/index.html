@@ -1,0 +1,53 @@
+<!-- 
+Enviar datos a través del formulario que sirven para
+autenticarse con ellos por ejemplo.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login example</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+  <form method="post" @submit.prevent="login">
+    <label class="label">Email</label>
+    <div class="control">
+      <input
+        v-model="email"
+        type="email"
+        name="email"
+      />
+    </div>
+    <label class="label">Password</label>
+    <div class="control">
+      <input
+        v-model="password"
+        type="password"
+        name="password"
+      />
+    </div>
+    <br>
+    <button type="submit" class="button">
+      Log In
+    </button>
+  </form>
+</div>
+<script type="text/javascript">
+var app = new Vue({
+  el: "#app",
+  data: {
+    email: '',
+    password: ''
+  },
+  methods: {
+    login () {
+      console.log(this.email)
+      console.log(this.password)
+    }
+  }
+});
+</script>
+</body>
+</html>
