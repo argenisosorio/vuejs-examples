@@ -1,0 +1,46 @@
+<!-- 
+Ejemplo de Almacenamiento del lado del cliente
+con localStorage.
+
+Escriba algo en el formulario y luego recargue la página.
+Usted notará que el valor escrito anteriormente será mostrado
+automáticamente. No se olvide que el navegador provee 
+las herramientas para desarrolladores, donde hay que pinchar
+en la almacenamiento almacenamiento y luego en almacenamiento
+local.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>localStorage</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+<body>
+<div id="main" class="container">
+  <div id="app">
+    Mi nombre es <input v-model="name">
+  </div>
+</div>
+<script>
+const app = new Vue({
+  el: '#app',
+  data: {
+    name: ''
+  },
+  mounted() {
+    if (localStorage.name) {
+      this.name = localStorage.name;
+    }
+  },
+  watch: {
+    name(newName) {
+      localStorage.name = newName;
+    }
+  }
+});
+</script>
+</body>
+</html>
