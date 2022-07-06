@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Preview the selected image</title>
+  <script src="https://unpkg.com/vue@2"></script>
+</head>
+<body>
+  <main id="app">
+    <div style="border-style:solid">
+      <input type="file" ref="file" @change="readFile()" />
+      <div v-if="image">
+        <img :src="preview" />
+      </div>
+    </div>
+  </main>
+<script>
+  var example = new Vue({
+    el: '#app',
+    data: {
+      file: null,
+      image: false,
+      preview: null
+    },
+    methods: {
+      readFile: function() {
+        this.file = this.$refs.file.files[0];
+        if (this.file.name.includes(".png") || this.file.name.includes(".jpg")) {
+          this.image = true;
+          this.preview = URL.createObjectURL(this.file);
+        }
+        else {
+          this.image = false;
+        }
+      }
+    }
+  })
+</script>
+</body>
+</html>
